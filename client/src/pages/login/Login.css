@@ -1,0 +1,38 @@
+.login-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #003366, #00509e);
+}
+
+.login-row {
+  height: 100vh;
+}
+
+.login-card {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.login-logo {
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+.login-title {
+  margin-bottom: 0 !important;
+  color: #003366 !important;
+}
+
+.login-form .ant-input,
+.login-form .ant-select-selector {
+  border-radius: 6px !important;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 10px;
+}

@@ -1,15 +1,17 @@
 import React from 'react'
+
 import './App.css'
-import { Button } from "antd";
+import Login_Page from './pages/login/Login';
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
-
+  const Router = createBrowserRouter([
+    { path: "/", element: <Login_Page /> },
+  ])
   return (
     <React.Fragment>
-      <div style={{ padding: "40px" }}>
-        <h1>HRMS Dashboard</h1>
-        <Button type="primary">Ant Design Working 🚀</Button>
-      </div>
+      <RouterProvider router={Router} />
     </React.Fragment>
   )
 }
