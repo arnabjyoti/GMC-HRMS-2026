@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './App.css'
-import Login_Page from './pages/login/Login';
+import Login_Page from './features/auth/pages/login/Login.jsx';
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 

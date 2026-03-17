@@ -4,7 +4,7 @@ import { UserOutlined, LockOutlined, SafetyOutlined } from "@ant-design/icons";
 
 import './Login.css';
 
-import GMC_Logo from "../../assets/Guwahati_Municipal_Corporation_Logo.png";
+import GMC_Logo from "../../../../assets/image/gmc_logo.png";
 
 const { Title, Text } = Typography;
 const { Option } = Select;
