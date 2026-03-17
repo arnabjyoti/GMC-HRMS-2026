@@ -1,6 +1,6 @@
 .login-wrapper {
   min-height: 100vh;
-  background: linear-gradient(135deg, #003366, #00509e);
+  background: linear-gradient(135deg, #0257ad, #00509e);
 }
 
 .login-row {
@@ -32,7 +32,26 @@
   border-radius: 6px !important;
 }
 
+.forgot-password {
+  text-align: end;
+}
+
 .login-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px !important;
+  gap: 20px;
+}
+
+.footer-title {
+  color: #003366 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+.skaplink-logo {
+  width: 100px;
 }

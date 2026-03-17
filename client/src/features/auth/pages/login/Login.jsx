@@ -5,6 +5,7 @@ import { UserOutlined, LockOutlined, SafetyOutlined } from "@ant-design/icons";
 import './Login.css';
 
 import GMC_Logo from "../../../../assets/image/gmc_logo.png";
+import Skaplink_Logo from "../../../../assets/image/skaplink_logo.jpg";
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -44,17 +45,6 @@ export default function Login_Page() {
                                 layout="vertical"
                                 className="login-form"
                             >
-                                <Form.Item
-                                    name="role"
-                                    label="Select Role"
-                                    rules={[{ required: true, message: "Please select role" }]}
-                                >
-                                    <Select placeholder="Choose your role">
-                                        <Option value="admin">Admin</Option>
-                                        <Option value="hr">HR Manager</Option>
-                                        <Option value="employee">Employee</Option>
-                                    </Select>
-                                </Form.Item>
 
                                 <Form.Item
                                     name="username"
@@ -78,7 +68,7 @@ export default function Login_Page() {
                                     />
                                 </Form.Item>
 
-                                <Form.Item
+                                {/* <Form.Item
                                     name="captcha"
                                     label="Captcha"
                                     rules={[{ required: true, message: "Please enter captcha" }]}
@@ -87,7 +77,7 @@ export default function Login_Page() {
                                         prefix={<SafetyOutlined />}
                                         placeholder="Enter Captcha"
                                     />
-                                </Form.Item>
+                                </Form.Item> */}
 
                                 <Form.Item>
                                     <Button type="primary" htmlType="submit" block size="large">
@@ -95,10 +85,22 @@ export default function Login_Page() {
                                     </Button>
                                 </Form.Item>
 
-                                <div className="login-footer">
+                                <div className="forgot-password">
                                     <a href="#">Forgot Password?</a>
                                 </div>
                             </Form>
+
+                            <div className="login-footer">
+                                <Title level={3} className="footer-title">
+                                    Powered by - 
+                                </Title>
+                                <img
+                                    src={Skaplink_Logo}
+                                    alt="Skaplink Logo"
+                                    className="skaplink-logo"
+                                />
+                            </div>
+
                         </Card>
                     </Col>
                 </Row>
