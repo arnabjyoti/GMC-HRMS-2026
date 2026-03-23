@@ -16,6 +16,8 @@ import {
   MedicineBoxOutlined,
 } from "@ant-design/icons";
 
+import GMC_LOGO from "../../assets/image/gmc_logo.png";
+
 const { Sider } = Layout;
 
 const menuItems = [
@@ -104,7 +106,6 @@ export default function Sidebar({ collapsed, onCollapse }) {
       width={230}
       collapsedWidth={64}
       style={{
-        /* Deep navy gradient — matches navbar left edge */
         background: "linear-gradient(180deg, #0a1520 0%, #0d1b2a 40%, #0f1e30 100%)",
         borderRight: "1px solid #1e3a50",
         minHeight: "100vh",
@@ -120,18 +121,18 @@ export default function Sidebar({ collapsed, onCollapse }) {
       {/* ── Brand Header ── */}
       <div
         style={{
-          padding: collapsed ? "18px 8px" : "18px 16px",
+          padding: collapsed ? "16px 8px" : "18px 16px",
           borderBottom: "1px solid #1e3a50",
           textAlign: "center",
           background: "linear-gradient(180deg, #06101a 0%, #0a1520 100%)",
           transition: "all 0.3s",
         }}
       >
-        {/* Emblem circle */}
+        {/* ✅ Fixed: proper <img> tag inside gold circular frame */}
         <div
           style={{
-            width: collapsed ? 36 : 52,
-            height: collapsed ? 36 : 52,
+            width: collapsed ? 38 : 54,
+            height: collapsed ? 38 : 54,
             borderRadius: "50%",
             background: "linear-gradient(145deg, #8b6914 0%, #e2c060 55%, #8b6914 100%)",
             border: "2px solid #c9a84c",
@@ -139,13 +140,23 @@ export default function Sidebar({ collapsed, onCollapse }) {
             alignItems: "center",
             justifyContent: "center",
             margin: "0 auto",
-            fontSize: collapsed ? 16 : 22,
-            color: "#0a1520",
             boxShadow: "0 0 18px rgba(201,168,76,0.4), 0 0 6px rgba(201,168,76,0.2)",
             transition: "all 0.3s",
+            overflow: "hidden",
+            padding: 3,
           }}
         >
-          ⚖
+          <img
+            src={GMC_LOGO}
+            alt="GMC Logo"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              borderRadius: "50%",
+              display: "block",
+            }}
+          />
         </div>
 
         {!collapsed && (
@@ -204,10 +215,7 @@ export default function Sidebar({ collapsed, onCollapse }) {
       />
 
       <style>{`
-        /* Override Ant Design dark menu colors to match navy theme */
-        .ant-layout-sider .ant-menu-dark {
-          background: transparent !important;
-        }
+        .ant-layout-sider .ant-menu-dark { background: transparent !important; }
         .ant-layout-sider .ant-menu-dark .ant-menu-item {
           color: #8aaec4 !important;
           font-family: 'Georgia', serif !important;
@@ -223,7 +231,6 @@ export default function Sidebar({ collapsed, onCollapse }) {
           color: #4a7a9b !important;
           transition: color 0.2s;
         }
-        /* Hover state */
         .ant-layout-sider .ant-menu-dark .ant-menu-item:hover {
           background: rgba(106,143,168,0.1) !important;
           color: #f0d080 !important;
@@ -236,7 +243,6 @@ export default function Sidebar({ collapsed, onCollapse }) {
           background: rgba(106,143,168,0.1) !important;
           color: #f0d080 !important;
         }
-        /* Selected item — gold left border accent */
         .ant-layout-sider .ant-menu-dark .ant-menu-item-selected {
           background: linear-gradient(90deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05)) !important;
           border-left: 3px solid #c9a84c !important;
@@ -245,7 +251,6 @@ export default function Sidebar({ collapsed, onCollapse }) {
         .ant-layout-sider .ant-menu-dark .ant-menu-item-selected .anticon {
           color: #c9a84c !important;
         }
-        /* Sub-menu background */
         .ant-layout-sider .ant-menu-dark .ant-menu-sub {
           background: rgba(6,16,26,0.6) !important;
         }
@@ -263,11 +268,9 @@ export default function Sidebar({ collapsed, onCollapse }) {
           border-left: 3px solid #c9a84c !important;
           background: rgba(201,168,76,0.1) !important;
         }
-        /* Submenu arrow */
         .ant-layout-sider .ant-menu-dark .ant-menu-submenu-arrow {
           color: #4a7a9b !important;
         }
-        /* Collapse trigger */
         .ant-layout-sider-trigger {
           background: #06101a !important;
           border-top: 1px solid #1e3a50 !important;
@@ -278,7 +281,6 @@ export default function Sidebar({ collapsed, onCollapse }) {
           color: #f0d080 !important;
           background: #0a1520 !important;
         }
-        /* Scrollbar styling */
         .ant-layout-sider ::-webkit-scrollbar { width: 4px; }
         .ant-layout-sider ::-webkit-scrollbar-track { background: transparent; }
         .ant-layout-sider ::-webkit-scrollbar-thumb { background: #1e3a50; border-radius: 2px; }
