@@ -14,7 +14,17 @@ import Skaplink_Logo from "../../../../assets/image/skaplink_logo.jpg";
 const { Text } = Typography;
 
 export default function Login_Page() {
+
   const [loading, setLoading] = useState(false);
+
+  const initialData = {
+    userId: '', password: ''
+  }
+  const [loginCredentials, setLoginCredentials] = React.useState(initialData)
+
+  const handleChange = (e) => {
+
+  }
 
   const onFinish = (values) => {
     setLoading(true);
@@ -339,7 +349,7 @@ export default function Login_Page() {
               color: "#2a5a78", fontFamily: "'Georgia', serif",
               fontSize: 11, letterSpacing: 0.5, whiteSpace: "nowrap",
             }}>
-              Powered by
+              Designed & Developed by -
             </span>
             <img
               src={Skaplink_Logo}
