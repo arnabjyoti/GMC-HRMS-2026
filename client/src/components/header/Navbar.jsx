@@ -1,4 +1,5 @@
 import React from "react";
+import { href, useNavigate } from "react-router-dom";
 import { Layout, Input, Badge, Avatar, Dropdown, Space, Divider, Tag } from "antd";
 import {
   UserOutlined,
@@ -30,10 +31,14 @@ const userMenuItems = [
     icon: <LogoutOutlined />,
     label: "Sign Out",
     danger: true,
+    href: "Navigate(/)",
   },
 ];
 
 export default function Navbar({ siderWidth = 230 }) {
+
+  const Navigate = useNavigate();
+
   return (
     <>
       <Header

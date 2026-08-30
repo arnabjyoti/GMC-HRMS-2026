@@ -11,9 +11,6 @@ import {
   ExclamationCircleOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import Sidebar from "../../components/sidebar/Sidebar";
-import Navbar from "../../components/header/Navbar";
-import FooterSection from "../../components/footer/FooterSection";
 
 const { Content } = Layout;
 
@@ -148,10 +145,7 @@ export default function Home() {
 
   return (
     <Layout style={{ minHeight: "100vh", background: "#07111c" }}>
-      <Sidebar collapsed={collapsed} onCollapse={setCollapsed} />
-
       <Layout style={{ marginLeft: siderWidth, transition: "margin-left 0.2s", background: "#07111c" }}>
-        <Navbar siderWidth={siderWidth} />
 
         <Content
           style={{
@@ -303,7 +297,6 @@ export default function Home() {
           </Row>
         </Content>
 
-        <FooterSection />
       </Layout>
 
       {/* Global table overrides */}

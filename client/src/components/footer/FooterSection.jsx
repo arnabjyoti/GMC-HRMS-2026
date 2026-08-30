@@ -34,6 +34,7 @@ export default function FooterSection() {
           justifyContent: "space-between",
           flexWrap: "wrap",
           gap: 8,
+          marginBottom: 10,
         }}
       >
         {/* Left — Copyright */}
